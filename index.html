@@ -384,6 +384,15 @@ footer { background:var(--gris-fonce); border-top:2px solid var(--dore); padding
 .bpm-poste { color: var(--dore-light); font-size: .7rem; line-height: 1.4; }
 @media(max-width:768px){ .bureau-photo-grid { grid-template-columns: repeat(auto-fill, minmax(130px,1fr)); gap:12px; } }
 </style>
+
+<style id="dl-quick-css">
+.dl-quick{margin-top:26px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.dl-quick-label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);font-weight:700}
+.dl-quick-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.dl-quick-row a{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:50px;font-weight:700;font-size:.9rem;text-decoration:none;color:#fff;background:rgba(255,255,255,.12);border:1.5px solid var(--dore,#c9a227);backdrop-filter:blur(4px);transition:.2s}
+.dl-quick-row a:hover{background:var(--dore,#c9a227);color:#111;transform:translateY(-2px)}
+@media(max-width:600px){.dl-quick-row{width:100%;flex-direction:column}.dl-quick-row a{justify-content:center;width:100%;box-sizing:border-box}}
+</style>
 </head>
 <body>
 
@@ -430,11 +439,19 @@ footer { background:var(--gris-fonce); border-top:2px solid var(--dore); padding
     </div>
     <p class="hero-tag">🇸🇳 Sénégal &nbsp;·&nbsp; Mauritanie 🇲🇷</p>
     <h1>Association <span>DiamLy</span></h1>
-    <p class="hero-sub">Jikke Janngo 2026 — 2028</p>
+    <p class="hero-sub">Jikke Janngo 2026 — 2029</p>
     <p class="hero-desc">La Révolution Numérique & Transfrontalière. Une association fondée par des jeunes, pour bâtir l'avenir de nos villages à travers la solidarité, le numérique et le développement durable.</p>
     <div class="hero-btns">
       <a href="#mission" class="btn-primary">Découvrir notre mission</a>
       <a href="#rejoindre" class="btn-outline">Devenir membre</a>
+    </div>
+    <div class="dl-quick" id="dl-quick">
+      <span class="dl-quick-label">Accès rapides · outils de travail</span>
+      <div class="dl-quick-row">
+        <a href="https://enndamlydoube-hash.github.io/diamly-cartes/generateur.html" target="_blank" rel="noopener">🪪 Générateur de cartes</a>
+        <a href="https://enndamlydoube-hash.github.io/diamly-cotisations/" target="_blank" rel="noopener">💰 Cotisations</a>
+        <a href="https://enndamlydoube-hash.github.io/diamly-cartes/" target="_blank" rel="noopener">🔐 Espace Admin</a>
+      </div>
     </div>
     <div class="hero-stats">
       <div class="stat"><span class="stat-num">589+</span><span class="stat-label">Membres</span></div>
@@ -487,7 +504,7 @@ footer { background:var(--gris-fonce); border-top:2px solid var(--dore); padding
 
 <!-- PROGRAMME JIKKE JANNGO -->
 <section id="programme">
-  <p class="section-tag">Programme 2026–2028</p>
+  <p class="section-tag">Programme 2026–2029</p>
   <h2 class="section-title">Diamly <span>Jikke Janngo</span></h2>
   <div class="gold-line"></div>
   <p class="section-sub">L'Espoir de Demain : L'Autonomie par l'Investissement et la Modernisation.</p>
@@ -590,7 +607,7 @@ footer { background:var(--gris-fonce); border-top:2px solid var(--dore); padding
 
 <section id="mission">
   <p class="section-tag" style="text-align:center">Notre Mission</p>
-  <h2 class="section-title" style="text-align:center">Jikke Janngo <span>2026–2028</span></h2>
+  <h2 class="section-title" style="text-align:center">Jikke Janngo <span>2026–2029</span></h2>
   <div class="gold-line" style="margin:12px auto 24px"></div>
   <p class="section-sub" style="margin:0 auto 0;text-align:center">Trois axes stratégiques pour transformer nos villages et assurer l'avenir de notre jeunesse.</p>
   <div class="mission-cards">
@@ -1247,7 +1264,7 @@ var DL_APPLICATIONS = [
 
   <!-- MODES DE PAIEMENT -->
   <p class="section-tag" style="margin-top:50px; text-align:center">Cotisations &amp; Paiements</p>
-  <h3 style="text-align:center; font-family:'Playfair Display',serif; color:var(--dore-light); font-size:1.3rem; margin:8px 0 24px;">Participez au Programme <span style="color:var(--dore)">Jikke Janngo 2026&#8211;2028</span></h3>
+  <h3 style="text-align:center; font-family:'Playfair Display',serif; color:var(--dore-light); font-size:1.3rem; margin:8px 0 24px;">Participez au Programme <span style="color:var(--dore)">Jikke Janngo 2026&#8211;2029</span></h3>
 
   <div class="pay-grid">
     <div class="pay-card">
@@ -1327,7 +1344,7 @@ var DL_APPLICATIONS = [
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Association DiamLy — Jikke Janngo 2026–2028</p>
+    <p>© 2026 Association DiamLy — Jikke Janngo 2026–2029</p>
     <div class="flags">🇸🇳 🇲🇷</div>
     <p>Sous la direction du Président Kaw Ly</p>
   </div>
@@ -1363,7 +1380,7 @@ const TRANSLATIONS = {
     'nav-rejoindre': 'Rejoindre',
     'nav-cta': 'Rejoindre',
     'hero-tag': '🇸🇳 Sénégal · Mauritanie 🇲🇷',
-    'hero-sub': 'Jikke Janngo 2026 — 2028',
+    'hero-sub': 'Jikke Janngo 2026 — 2029',
     'hero-desc': 'La Révolution Numérique & Transfrontalière. Une association fondée par des jeunes, pour bâtir l'avenir de nos villages à travers la solidarité, le numérique et le développement durable.',
     'btn-mission': 'Découvrir notre mission',
     'btn-membre': 'Devenir membre',
@@ -1377,7 +1394,7 @@ const TRANSLATIONS = {
     'tag-bureau': 'Notre Équipe',
     'tag-rejoindre': 'Nous Rejoindre',
     'title-apropos': 'Une association fondée par des jeunes',
-    'title-mission': 'Jikke Janngo 2026–2028',
+    'title-mission': 'Jikke Janngo 2026–2029',
     'title-villages': 'Les 7 Villages',
     'title-bureau': 'Le Bureau Général',
     'title-rejoindre': 'Devenez Membre DiamLy',
@@ -1395,7 +1412,7 @@ const TRANSLATIONS = {
     'nav-rejoindre': 'Tawtoyde',
     'nav-cta': 'Tawtoyde',
     'hero-tag': '🇸🇳 Senegaal · Muritani 🇲🇷',
-    'hero-sub': 'Jikke Janngo 2026 — 2028',
+    'hero-sub': 'Jikke Janngo 2026 — 2029',
     'hero-desc': 'Cubaari Nimeyel e Ɓaleeri. Fedde nde tergalde fewjiinde, ngam waɗde ɓamtaare gurɓe amen e wallidiigu, nimeyel e hoɗdorde.',
     'btn-mission': 'Yiyde Kuccam Men',
     'btn-membre': 'Won'de Tergal',
@@ -1409,7 +1426,7 @@ const TRANSLATIONS = {
     'tag-bureau': 'Tiitoonde Men',
     'tag-rejoindre': 'Tawtoyde Men',
     'title-apropos': 'Fedde nde tergalde fewjiinde',
-    'title-mission': 'Jikke Janngo 2026–2028',
+    'title-mission': 'Jikke Janngo 2026–2029',
     'title-villages': '7 Guremen',
     'title-bureau': 'Biro Dowrowe',
     'title-rejoindre': 'Won'on Tergal DiamLy',
