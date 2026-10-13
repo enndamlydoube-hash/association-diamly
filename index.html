@@ -7,41 +7,40 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow+Condensed:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bleu-fonce:  #0D2C54;
-  --bleu-roi:    #1A4B82;
-  --gris-fonce:  #2D3440;
-  --gris-med:    #48607F;
-  --gris-argent: #BCC6CC;
-  --dore:        #C5A059;
-  --dore-light:  #E1C382;
-  --dore-pale:   #F5E1AF;
-  --blanc:       #F8F9FA;
-  --rouge:       #C0392B;
+ --bleu-fonce: #0D2C54;
+ --bleu-roi: #1A4B82;
+ --gris-fonce: #2D3440;
+ --gris-med: #48607F;
+ --gris-argent: #BCC6CC;
+ --dore: #C5A059;
+ --dore-light: #E1C382;
+ --dore-pale: #F5E1AF;
+ --blanc: #F8F9FA;
+ --rouge: #C0392B;
 }
 
 * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
 
 body {
-  font-family: 'Lato', sans-serif;
-  background: var(--bleu-fonce);
-  color: var(--blanc);
-  overflow-x: hidden;
+ font-family: 'Lato', sans-serif;
+ background: var(--bleu-fonce);
+ color: var(--blanc);
+ overflow-x: hidden;
 }
 
 /* ── NAV ── */
 nav {
-  position: fixed; top:0; width:100%; z-index:1000;
-  background: rgba(13,44,84,0.96);
-  backdrop-filter: blur(10px);
-  border-bottom: 2px solid var(--dore);
-  padding: 0 5%;
-  display: flex; align-items:center; justify-content:space-between;
-  height: 70px;
+ position: fixed; top:0; width:100%; z-index:1000;
+ background: rgba(13,44,84,0.96);
+ backdrop-filter: blur(10px);
+ border-bottom: 2px solid var(--dore);
+ padding: 0 5%;
+ display: flex; align-items:center; justify-content:space-between;
+ height: 70px;
 }
 .nav-logo { display:flex; align-items:center; gap:12px; }
-.nav-logo img { height:48px; }
 .nav-logo span { font-family:'Playfair Display',serif; font-size:1.3rem; color:var(--dore); letter-spacing:2px; }
-.nav-links { display:flex; gap:28px; list-style:none; align-items: center; }
+.nav-links { display:flex; gap:28px; list-style:none; }
 .nav-links a { color:var(--gris-argent); text-decoration:none; font-size:.9rem; letter-spacing:1px; text-transform:uppercase; font-weight:600; transition:.3s; }
 .nav-links a:hover { color:var(--dore); }
 .nav-cta { background:var(--dore); color:var(--bleu-fonce); padding:8px 20px; border-radius:3px; font-weight:700; font-size:.85rem; letter-spacing:1px; text-decoration:none; transition:.3s; }
@@ -56,37 +55,33 @@ nav {
 
 /* ── HERO ── */
 #hero {
-  min-height: 100vh;
-  background: linear-gradient(135deg, var(--gris-fonce) 0%, var(--bleu-fonce) 50%, var(--bleu-roi) 100%);
-  display:flex; align-items:center; justify-content:center;
-  text-align:center; padding:100px 5% 60px;
-  position:relative; overflow:hidden;
+ min-height: 100vh;
+ background: linear-gradient(135deg, var(--gris-fonce) 0%, var(--bleu-fonce) 50%, var(--bleu-roi) 100%);
+ display:flex; align-items:center; justify-content:center;
+ text-align:center; padding:100px 5% 60px;
+ position:relative; overflow:hidden;
 }
 #hero::before {
-  content:'';
-  position:absolute; inset:0;
-  background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(197,160,89,0.03) 40px, rgba(197,160,89,0.03) 41px);
+ content:'';
+ position:absolute; inset:0;
+ background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(197,160,89,0.03) 40px, rgba(197,160,89,0.03) 41px);
 }
 .hero-content { position:relative; z-index:2; max-width:800px; }
-.hero-logo { width:160px; margin:0 auto 24px; animation: fadeDown .8s ease; }
-.hero-logo img { width:100%; }
-.hero-tag { font-family:'Barlow Condensed',sans-serif; color:var(--dore); letter-spacing:6px; font-size:.9rem; text-transform:uppercase; margin-bottom:16px; animation:fadeDown .8s .1s both; }
-h1 { font-family:'Playfair Display',serif; font-size:clamp(2.2rem,6vw,4rem); font-weight:900; line-height:1.1; color:var(--blanc); margin-bottom:12px; animation:fadeDown .8s .2s both; }
+.hero-tag { font-family:'Barlow Condensed',sans-serif; color:var(--dore); letter-spacing:6px; font-size:.9rem; text-transform:uppercase; margin-bottom:16px; }
+h1 { font-family:'Playfair Display',serif; font-size:clamp(2.2rem,6vw,4rem); font-weight:900; line-height:1.1; color:var(--blanc); margin-bottom:12px; }
 h1 span { color:var(--dore); }
-.hero-sub { font-size:1.1rem; color:var(--gris-argent); margin-bottom:16px; letter-spacing:2px; animation:fadeDown .8s .3s both; }
-.hero-desc { font-size:1rem; color:rgba(248,249,250,0.75); max-width:580px; margin:0 auto 36px; line-height:1.8; animation:fadeDown .8s .4s both; }
-.hero-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; animation:fadeDown .8s .5s both; }
+.hero-sub { font-size:1.1rem; color:var(--gris-argent); margin-bottom:16px; letter-spacing:2px; }
+.hero-desc { font-size:1rem; color:rgba(248,249,250,0.75); max-width:580px; margin:0 auto 36px; line-height:1.8; }
+.hero-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
 .btn-primary { background:var(--dore); color:var(--bleu-fonce); padding:14px 32px; font-weight:700; letter-spacing:1px; text-decoration:none; border-radius:3px; transition:.3s; font-size:.95rem; }
 .btn-primary:hover { background:var(--dore-light); transform:translateY(-2px); }
 .btn-outline { border:2px solid var(--dore); color:var(--dore); padding:12px 30px; font-weight:700; letter-spacing:1px; text-decoration:none; border-radius:3px; transition:.3s; font-size:.95rem; }
 .btn-outline:hover { background:var(--dore); color:var(--bleu-fonce); }
 
-.hero-stats { display:flex; gap:40px; justify-content:center; flex-wrap:wrap; margin-top:50px; padding-top:40px; border-top:1px solid rgba(197,160,89,0.3); animation:fadeDown .8s .6s both; }
+.hero-stats { display:flex; gap:40px; justify-content:center; flex-wrap:wrap; margin-top:50px; padding-top:40px; border-top:1px solid rgba(197,160,89,0.3); }
 .stat { text-align:center; }
 .stat-num { font-family:'Playfair Display',serif; font-size:2.4rem; font-weight:900; color:var(--dore); display:block; }
 .stat-label { font-size:.8rem; color:var(--gris-argent); letter-spacing:2px; text-transform:uppercase; }
-
-@keyframes fadeDown { from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)} }
 
 /* ── SECTIONS ── */
 section { padding:80px 5%; }
@@ -96,159 +91,244 @@ section { padding:80px 5%; }
 .section-sub { color:var(--gris-argent); font-size:1rem; max-width:600px; line-height:1.7; margin-bottom:50px; }
 .gold-line { width:60px; height:3px; background:var(--dore); margin:12px 0 24px; }
 
-/* ── SECTION APPLICATIONS & PLATEFORMES (Ajoutée proprement) ── */
-#applications{
-  --dl-vert:#1e8a3c; --dl-or:#f2b705; --dl-rouge:#d62828; --dl-nuit:#12203a;
-  --dl-fond:#0D2C54; --dl-texte:#F8F9FA;
-  padding:56px 16px; background:var(--dl-fond); color:var(--dl-texte);
-  font-family:inherit; scroll-margin-top:70px;
-  border-top: 1px solid rgba(197,160,89,0.3);
-}
-#applications .dl-wrap{max-width:1100px;margin:0 auto;}
-#applications h2{text-align:center;margin:0 0 6px;color:var(--dore);font-size:clamp(1.6rem,4vw,2.2rem);font-family:'Playfair Display',serif;}
-#applications .dl-bar{height:3px;width:120px;margin:10px auto 14px;border-radius:2px;
-  background:linear-gradient(90deg,var(--dl-vert) 33%,var(--dl-or) 33% 66%,var(--dl-rouge) 66%);}
-#applications .dl-intro{text-align:center;max-width:620px;margin:0 auto 32px;color:var(--gris-argent);}
-.dl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;}
-.dl-card{background:rgba(26,75,130,0.3);border:1px solid rgba(197,160,89,0.3);border-radius:14px;padding:22px 18px;text-align:center;
-  display:flex;flex-direction:column;align-items:center;gap:10px;box-shadow:0 2px 10px rgba(0,0,0,.1);
-  transition:transform .2s,box-shadow .2s;}
-.dl-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.2);border-color:var(--dore);}
-.dl-logo{width:110px;height:110px;border-radius:50%;overflow:hidden;border:3px solid var(--dore);
-  display:flex;align-items:center;justify-content:center;background:var(--dl-nuit);color:#fff;
-  font-size:2.4rem;font-weight:700;text-decoration:none;}
-.dl-logo img{width:100%;height:100%;object-fit:cover;display:block;}
-.dl-card h3{margin:4px 0 0;font-size:1.1rem;color:var(--blanc);font-family:'Playfair Display',serif;}
-.dl-card p{margin:0;font-size:.9rem;color:var(--gris-argent);flex:1;}
-.dl-btn{display:inline-block;padding:10px 22px;border-radius:999px;background:var(--dore);color:var(--bleu-fonce);
-  text-decoration:none;font-weight:600;font-size:.9rem;}
-.dl-btn:hover{background:var(--dore-light);}
-.dl-card.dl-libre{background:transparent;border:2px dashed rgba(197,160,89,0.4);box-shadow:none;}
-.dl-card.dl-libre .dl-logo{background:rgba(197,160,89,0.1);color:var(--dore);border:3px dashed rgba(197,160,89,0.4);font-size:2.6rem;}
-.dl-card.dl-libre h3{color:var(--dore-light);}
-.dl-card.dl-libre .dl-btn{background:rgba(197,160,89,0.2);color:var(--dore);pointer-events:none;}
+/* ── À PROPOS ── */
+#apropos { background:linear-gradient(135deg, var(--gris-fonce), var(--bleu-fonce)); }
+.apropos-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+.values { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:32px; }
+.value-item { display:flex; align-items:flex-start; gap:12px; }
+.value-icon { color:var(--dore); font-size:1.4rem; flex-shrink:0; margin-top:2px; }
+.value-text strong { display:block; color:var(--dore-light); font-size:.95rem; margin-bottom:3px; }
+.value-text span { font-size:.85rem; color:var(--gris-argent); }
+
+/* ── MISSION ── */
+#mission { background:var(--bleu-fonce); text-align:center; }
+.mission-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:50px; }
+.mission-card { background:rgba(26,75,130,0.3); border:1px solid rgba(197,160,89,0.3); border-radius:4px; padding:36px 24px; transition:.3s; position:relative; overflow:hidden; }
+.mission-card:hover { background:rgba(26,75,130,0.5); transform:translateY(-4px); }
+.mission-icon { font-size:2.5rem; margin-bottom:16px; display:block; }
+.mission-card h3 { font-family:'Playfair Display',serif; color:var(--dore); font-size:1.2rem; margin-bottom:12px; }
+.mission-card p { color:var(--gris-argent); font-size:.9rem; line-height:1.7; }
+
+/* ── VILLAGES ── */
+#villages { background:linear-gradient(135deg, var(--gris-fonce), var(--bleu-fonce)); }
+.villages-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin-top:40px; }
+.village-card { background:rgba(13,44,84,0.6); border:1px solid rgba(197,160,89,0.25); border-radius:4px; padding:28px 22px; transition:.3s; }
+.village-card:hover { border-color:var(--dore); transform:translateY(-3px); background:rgba(13,44,84,0.9); }
+.village-flag { font-size:1.8rem; margin-bottom:12px; }
+.village-card h3 { font-family:'Playfair Display',serif; color:var(--dore); font-size:1.15rem; margin-bottom:6px; }
+.village-coord { font-size:.85rem; color:var(--gris-argent); margin-bottom:4px; }
+.village-coord strong { color:var(--blanc); }
+
+/* ── BUREAU ── */
+#bureau { background:var(--bleu-fonce); text-align:center; }
+.president-card { max-width:360px; margin:0 auto 50px; background:linear-gradient(135deg,var(--gris-fonce),var(--bleu-roi)); border:2px solid var(--dore); border-radius:6px; padding:36px 28px; }
+.president-card h3 { font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--dore); margin-bottom:4px; }
+.president-card .nick { color:var(--gris-argent); font-size:.9rem; margin-bottom:10px; }
+.president-card .poste { background:var(--dore); color:var(--bleu-fonce); padding:5px 18px; border-radius:20px; font-weight:700; font-size:.82rem; letter-spacing:1px; display:inline-block; }
+.bureau-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+.bureau-member { background:rgba(26,75,130,0.25); border:1px solid rgba(197,160,89,0.2); border-radius:4px; padding:20px 16px; }
+.bureau-member h4 { color:var(--blanc); font-size:.95rem; margin-bottom:4px; }
+.bureau-member span { color:var(--dore-light); font-size:.8rem; }
+
+/* ── APPLICATIONS ── */
+#applications { background: linear-gradient(135deg, var(--bleu-fonce), var(--gris-fonce)); padding: 80px 5%; text-align: center; }
+.apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; max-width: 1000px; margin-left: auto; margin-right: auto; }
+.app-card { background: rgba(26, 75, 130, 0.35); border: 1px solid var(--dore); border-radius: 8px; padding: 35px 25px; transition: transform .3s ease; display: flex; flex-direction: column; align-items: center; }
+.app-card:hover { transform: translateY(-5px); background: rgba(26, 75, 130, 0.6); }
+.app-logo { width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--dore); object-fit: cover; margin-bottom: 20px; }
+.app-card h3 { font-family: 'Playfair Display', serif; color: var(--dore); font-size: 1.4rem; margin-bottom: 12px; }
+.app-card p { color: var(--gris-argent); font-size: 0.92rem; line-height: 1.6; margin-bottom: 25px; }
+.app-btn { background: var(--dore); color: var(--bleu-fonce); padding: 10px 24px; border-radius: 4px; font-weight: 700; text-decoration: none; font-size: 0.9rem; letter-spacing: 1px; transition: background .3s; }
+.app-btn:hover { background: var(--dore-light); }
 
 /* ── FOOTER ── */
-footer { background:var(--gris-fonce); border-top:2px solid var(--dore); padding:50px 5% 24px; }
-.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:40px; margin-bottom:40px; }
-.footer-brand img { height:70px; margin-bottom:16px; }
-.footer-brand p { color:var(--gris-argent); font-size:.88rem; line-height:1.7; max-width:300px; }
-.footer-col h4 { color:var(--dore); font-family:'Barlow Condensed',sans-serif; letter-spacing:3px; font-size:.85rem; text-transform:uppercase; margin-bottom:16px; }
-.footer-col a, .footer-col p { color:var(--gris-argent); text-decoration:none; font-size:.88rem; display:block; margin-bottom:8px; line-height:1.6; transition:.2s; }
+footer { background: #071930; border-top: 2px solid var(--dore); padding: 50px 5% 20px; }
+.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto 40px; }
+.footer-brand p { color:var(--gris-argent); font-size:.9rem; line-height:1.7; margin-top:12px; }
+.footer-col h4 { font-family:'Playfair Display',serif; color:var(--dore); font-size:1.1rem; margin-bottom:16px; }
+.footer-col a { display:block; color:var(--gris-argent); text-decoration:none; font-size:.9rem; margin-bottom:8px; transition:.3s; }
 .footer-col a:hover { color:var(--dore); }
-.footer-bottom { border-top:1px solid rgba(197,160,89,0.2); padding-top:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
-.footer-bottom p { color:var(--gris-argent); font-size:.8rem; }
-.flags { font-size:1.2rem; letter-spacing:4px; }
+.footer-bottom { text-align:center; padding-top:20px; border-top:1px solid rgba(197,160,89,0.2); color:var(--gris-argent); font-size:.85rem; }
+
+@media(max-width:768px) {
+ .nav-links, .nav-cta { display:none; }
+ .hamburger { display:flex; }
+ .apropos-grid { grid-template-columns:1fr; gap:30px; }
+ .mission-cards { grid-template-columns:1fr; }
+ .footer-grid { grid-template-columns:1fr; gap:30px; }
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <div class="nav-logo">
-    <img src="data:image/png;base64,..." alt="Logo DiamLy">
-    <span>DIAMLY</span>
-  </div>
-  <ul class="nav-links">
-    <li><a href="#accueil">Accueil</a></li>
-    <li><a href="#villages">Villages</a></li>
-    <li><a href="#bureau">Bureau</a></li>
-    <li><a href="#applications">Applications</a></li>
-    <li><a href="#programme">Programme</a></li>
-  </ul>
-  <a href="#rejoindre" class="nav-cta">Adhérer</a>
-  <div class="hamburger">
-    <span></span><span></span><span></span>
-  </div>
+ <div class="nav-logo">
+  <span>DIAMLY</span>
+ </div>
+ <ul class="nav-links">
+  <li><a href="#accueil">Accueil</a></li>
+  <li><a href="#apropos">À Propos</a></li>
+  <li><a href="#mission">Missions</a></li>
+  <li><a href="#villages">Villages</a></li>
+  <li><a href="#bureau">Bureau</a></li>
+  <li><a href="#applications">Applications</a></li>
+ </ul>
+ <a href="#applications" class="nav-cta">Accéder aux Apps</a>
+ <div class="hamburger" onclick="toggleMenu()">
+  <span></span><span></span><span></span>
+ </div>
 </nav>
 
-<!-- CONTENU PRINCIPAL DE VOTRE SITE (Accueil, Villages, Bureau, etc.) -->
-<main id="accueil">
-  <!-- (Vos sections existantes restent parfaitement en place ici) -->
-</main>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="#accueil" onclick="toggleMenu()">Accueil</a>
+ <a href="#apropos" onclick="toggleMenu()">À Propos</a>
+ <a href="#mission" onclick="toggleMenu()">Missions</a>
+ <a href="#villages" onclick="toggleMenu()">Villages</a>
+ <a href="#bureau" onclick="toggleMenu()">Bureau</a>
+ <a href="#applications" onclick="toggleMenu()">Applications</a>
+</div>
 
-<!-- SECTION APPLICATIONS & PLATEFORMES -->
-<section id="applications" aria-labelledby="dl-apps-titre">
-  <div class="dl-wrap">
-    <h2 id="dl-apps-titre">Applications &amp; Plateformes</h2>
-    <div class="dl-bar"></div>
-    <p class="dl-intro">Tous les services numériques de l'Association DiamLy au même endroit. Cliquez sur un logo ou sur son bouton pour ouvrir l'application.</p>
-    <div class="dl-grid" id="dl-apps-grid"></div>
+<header id="accueil">
+ <div class="hero-content">
+  <div class="hero-tag">Jikke Janngo 2026 — 2029</div>
+  <h1>Association <span>DiamLy</span></h1>
+  <p class="hero-sub">Développement Durable & Solidarité des Villages</p>
+  <p class="hero-desc">Unir nos forces pour connecter, structurer et développer nos 7 villages à travers des initiatives locales et des plateformes numériques modernes.</p>
+  <div class="hero-btns">
+   <a href="#applications" class="btn-primary">Nos Applications</a>
+   <a href="#apropos" class="btn-outline">Découvrir l'Association</a>
   </div>
+  <div class="hero-stats">
+   <div class="stat"><span class="stat-num">7</span><span class="stat-label">Villages</span></div>
+   <div class="stat"><span class="stat-num">2026</span><span class="stat-label">Cap 2028</span></div>
+   <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Solidaire</span></div>
+  </div>
+ </div>
+</header>
+
+<section id="apropos">
+ <div class="apropos-grid">
+  <div>
+   <div class="section-tag">Qui sommes-nous ?</div>
+   <h2 class="section-title">L'union au service du <span>progrès</span></h2>
+   <div class="gold-line"></div>
+   <p class="section-sub" style="margin-bottom:20px;">L'Association DiamLy œuvre pour le bien-être des populations locales à travers des projets concrets, participatifs et tournés vers l'avenir.</p>
+   <div class="values">
+    <div class="value-item">
+     <div class="value-icon">❖</div>
+     <div class="value-text"><strong>Solidarité</strong><span>Entraide active entre les villages</span></div>
+    </div>
+    <div class="value-item">
+     <div class="value-icon">❖</div>
+     <div class="value-text"><strong>Innovation</strong><span>Outils numériques et de gestion</span></div>
+    </div>
+   </div>
+  </div>
+ </div>
 </section>
 
-<!-- SCRIPT DES APPLICATIONS -->
-<script>
-var DL_LOGO_DEFAUT = "data:image/jpeg;base64,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";
+<section id="mission">
+ <div class="section-tag">Nos Objectifs</div>
+ <h2 class="section-title">Notre <span>Mission</span></h2>
+ <div class="gold-line" style="margin:12px auto 24px;"></div>
+ <p class="section-sub" style="margin:0 auto 50px;">Construire un avenir durable par le recensement, l'éducation et la structuration communautaire.</p>
+ <div class="mission-cards">
+  <div class="mission-card">
+   <span class="mission-icon">📊</span>
+   <h3>Recensement Numérique</h3>
+   <p>Moderniser la gestion des membres et structurer les données de nos 7 localités.</p>
+  </div>
+  <div class="mission-card">
+   <span class="mission-icon">🤝</span>
+   <h3>Soutien Familial</h3>
+   <p>Renforcer les liens de solidarité et l'accompagnement des familles membres.</p>
+  </div>
+  <div class="mission-card">
+   <span class="mission-icon">🌱</span>
+   <h3>Développement Durable</h3>
+   <p>Initier des projets locaux favorisant l'autonomie et le progrès durable.</p>
+  </div>
+ </div>
+</section>
 
-var DL_APPLICATIONS = [
-  { nom:"Cartes de membres", description:"Accueil et consultation des cartes de membres de l'association.", lien:"https://enndamlydoube-hash.github.io/diamly-cartes/", logo:"" },
-  { nom:"Générateur de cartes", description:"Créez la carte d'un membre en quelques clics.", lien:"https://enndamlydoube-hash.github.io/diamly-cartes/generateur.html", logo:"" },
-  { nom:"Cotisations & Soutien", description:"Gestion des cotisations et soutien à l'association.", lien:"https://enndamlydoube-hash.github.io/diamly-cotisations/", logo:"" },
-  { nom:"", description:"", lien:"", logo:"" },
-  { nom:"", description:"", lien:"", logo:"" },
-  { nom:"", description:"", lien:"", logo:"" }
-];
+<section id="villages">
+ <div class="section-tag">Nos Localités</div>
+ <h2 class="section-title">Les 7 <span>Villages</span></h2>
+ <div class="gold-line"></div>
+ <div class="villages-grid">
+  <div class="village-card"><div class="village-flag">🇸🇳</div><h3>Ngano</h3><div class="village-coord">Coordination : <strong>Binta Alhadji Ly</strong></div></div>
+  <div class="village-card"><div class="village-flag">🇸🇳</div><h3>Sinthiou B.</h3><div class="village-coord">Coordination : <strong>Aissata Moussa Sall</strong></div></div>
+  <div class="village-card"><div class="village-flag">🇸🇳</div><h3>Djowol</h3><div class="village-coord">Coordination : <strong>Amy Dinnel Bane</strong></div></div>
+  <div class="village-card"><div class="village-flag">🇸🇳</div><h3>Sagné</h3><div class="village-coord">Coordination : <strong>Moussa Ba</strong></div></div>
+  <div class="village-card"><div class="village-flag">🇸🇳</div><h3>Dialoubé</h3><div class="village-coord">Coordination : <strong>Diarry Sow</strong></div></div>
+  <div class="village-card"><div class="village-flag">🇲🇷</div><h3>Nouakchott</h3><div class="village-coord">Coordination : <strong>Amadou Tidjani Ly</strong></div></div>
+  <div class="village-card"><div class="village-flag">🇸🇳</div><h3>Dakar / Mbour</h3><div class="village-coord">Coordination : <strong>Abdoul Karim Ly</strong></div></div>
+ </div>
+</section>
 
-(function(){
-  var grid = document.getElementById('dl-apps-grid');
-  DL_APPLICATIONS.forEach(function(app){
-    var libre = !app.lien;
-    var card = document.createElement('div');
-    card.className = 'dl-card' + (libre ? ' dl-libre' : '');
-    var logoEl = document.createElement(libre ? 'div' : 'a');
-    logoEl.className = 'dl-logo';
-    if(libre){
-      logoEl.textContent = '+';
-    } else {
-      logoEl.href = app.lien; logoEl.target = '_blank'; logoEl.rel = 'noopener';
-      logoEl.setAttribute('aria-label', 'Ouvrir ' + app.nom);
-      var img = document.createElement('img');
-      img.alt = 'Logo ' + app.nom;
-      img.src = app.logo || DL_LOGO_DEFAUT;
-      img.onerror = function(){ if(img.src !== DL_LOGO_DEFAUT){ img.src = DL_LOGO_DEFAUT; } };
-      logoEl.appendChild(img);
-    }
-    card.appendChild(logoEl);
-    var h = document.createElement('h3');
-    h.textContent = app.nom || 'Emplacement libre';
-    card.appendChild(h);
-    var p = document.createElement('p');
-    p.textContent = libre ? 'Future application — à venir.' : app.description;
-    card.appendChild(p);
-    var btn = document.createElement(libre ? 'span' : 'a');
-    btn.className = 'dl-btn';
-    btn.textContent = libre ? 'Bientôt' : 'Ouvrir';
-    if(!libre){ btn.href = app.lien; btn.target = '_blank'; btn.rel = 'noopener'; }
-    card.appendChild(btn);
-    grid.appendChild(card);
-  });
-})();
-</script>
+<section id="bureau">
+ <div class="section-tag">Gouvernance</div>
+ <h2 class="section-title">Le <span>Bureau</span></h2>
+ <div class="gold-line" style="margin:12px auto 24px;"></div>
+ <div class="president-card">
+  <h3>Oumar Ly</h3>
+  <div class="nick">Kaw Ly</div>
+  <div class="poste">Président DiamLy</div>
+ </div>
+ <div class="bureau-grid">
+  <div class="bureau-member"><h4>Fatimata Ly</h4><span>Secrétaire Générale</span></div>
+  <div class="bureau-member"><h4>Équipe Jeunesse</h4><span>Gestion & Coordination</span></div>
+ </div>
+</section>
 
-<!-- FOOTER OFFICIEL -->
+<!-- SECTION APPLICATIONS & PLATEFORMES -->
+<section id="applications">
+ <div class="section-tag">Écosystème Numérique</div>
+ <h2 class="section-title">Applications & <span>Plateformes</span></h2>
+ <div class="gold-line" style="margin:12px auto 24px;"></div>
+ <p class="section-sub" style="margin:0 auto 40px;">Tous les services numériques de l'Association DiamLy au même endroit. Cliquez sur le bouton pour ouvrir l'application.</p>
+ <div class="apps-grid">
+  <div class="app-card">
+   <h3>Cartes de membres</h3>
+   <p>Accueil et consultation des cartes numériques des membres de l'association.</p>
+   <a href="https://enndamlydoube-hash.github.io/cartes" target="_blank" class="app-btn">Ouvrir</a>
+  </div>
+  <div class="app-card">
+   <h3>Soutien Familial</h3>
+   <p>Plateforme dédiée à la gestion et au suivi des actions de soutien familial.</p>
+   <a href="https://enndamlydoube-hash.github.io/soutien-familial" target="_blank" class="app-btn">Ouvrir</a>
+  </div>
+ </div>
+</section>
+
 <footer>
-    <div class="footer-grid">
-        <div class="footer-brand">
-            <p>Association DiamLy — Œuvrant pour le développement durable et la solidarité de nos villages.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Navigation</h4>
-            <a href="#accueil">Accueil</a>
-            <a href="#villages">Villages</a>
-            <a href="#bureau">Bureau</a>
-            <a href="#applications">Applications</a>
-        </div>
-        <div class="footer-col">
-            <h4>Contact</h4>
-            <p>Association DiamLy</p>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 Association DiamLy — Tous droits réservés.</p>
-        <div class="flags">🇸🇳 🇲🇷 🇫🇷</div>
-    </div>
+ <div class="footer-grid">
+  <div class="footer-brand">
+   <span style="font-family:'Playfair Display',serif; font-size:1.2rem; color:var(--dore);">Association DiamLy</span>
+   <p>Œuvrant pour le développement durable, l'entraide et la solidarité de nos villages.</p>
+  </div>
+  <div class="footer-col">
+   <h4>Navigation</h4>
+   <a href="#accueil">Accueil</a>
+   <a href="#villages">Villages</a>
+   <a href="#bureau">Bureau</a>
+   <a href="#applications">Applications</a>
+  </div>
+  <div class="footer-col">
+   <h4>Contact</h4>
+   <p>Association DiamLy</p>
+  </div>
+ </div>
+ <div class="footer-bottom">
+  <p>&copy; 2026 Association DiamLy - Tous droits réservés.</p>
+ </div>
 </footer>
 
+<script>
+function toggleMenu() {
+ const menu = document.getElementById('mobileMenu');
+ menu.classList.toggle('open');
+}
+</script>
 </body>
 </html>
